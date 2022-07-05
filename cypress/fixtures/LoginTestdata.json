@@ -1,0 +1,13 @@
+{
+  "Website" : "https://www.douglas.de/de",
+  "UserEmail" : "lalitha.dumpeta@gmail.com",
+  "UserPassword" : "Lalitha#1",
+  "UserFirstname" : "lalitha",
+  "Inavalidpassword" : "Abcdef#1",
+  "Errormessage" : "Falsche Zugangsdaten",
+  "ResetEmail" : "lalitha.474@gmail.com",
+  "ResetPassword" : "abcdefgh",
+  "Warningmeassage" : "Token ist ungültig oder abgelaufen.",
+  "Checkdetails" : "Bitte überprüfe deine Angaben",
+  "resetpasswordURL" : "https://www.douglas.de/de/resetPassword?apiKey=3_-t-AxoeuhzOrCaDZk_wp_QwxvFYBBXVtz_zAZYfEEZtROiPih82cGJqJcUvVrSrQ&pwrt=tk1..AcbHox4kAw.y3McgwL7aB2lWxqcmRAU-I700MEV84JnoaOOVBazQ3J8kvj0nVwkHjOocho6hzA_.iLfWiT1S_DffT0gPXVIepwiRfk3hZ84SkIrTW7pxNi6hmJ3fUfSG2aV9rKskcz2CNTaIR7LQATZpCQD69DVNfg.sc3&email=lalitha.474%40gmail.com"
+}

@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-05T13:29:47.177Z",
+    "end": "2022-07-05T13:30:54.486Z",
+    "duration": 67309,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "98009400-0167-4436-ac75-4314575b3b49",
+      "title": "",
+      "fullFile": "cypress/e2e/LoginTest.cy.js",
+      "file": "cypress/e2e/LoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+          "title": "Login functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with valid username and password",
+              "fullTitle": "Login functionality Login with valid username and password",
+              "timedOut": null,
+              "duration": 18658,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.openURL(this.data.Website);\nloginpage.navigateLoginsection();\nloginpage.enterUsername(this.data.UserEmail);\nloginpage.enterPassword(this.data.UserPassword);\nloginpage.clickLogin();\nhomepage.clickProfile();\nhomepage.verifyloginname(this.data.UserFirstname);",
+              "err": {},
+              "uuid": "caa537cd-e725-4312-91d7-763bac5b6a34",
+              "parentUUID": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login  with invalid credentials",
+              "fullTitle": "Login functionality Login  with invalid credentials",
+              "timedOut": null,
+              "duration": 10321,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.openURL(this.data.Website);\nloginpage.navigateLoginsection();\nloginpage.enterUsername(this.data.UserEmail);\nloginpage.enterPassword(this.data.Inavalidpassword);\nloginpage.clickLogin();\nloginpage.verifyWarningmessage(this.data.Errormessage);",
+              "err": {},
+              "uuid": "43a7184a-b199-48a9-b177-a7c7d42b82d3",
+              "parentUUID": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "veriify email sent to reset Password",
+              "fullTitle": "Login functionality veriify email sent to reset Password",
+              "timedOut": null,
+              "duration": 8442,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.openURL(this.data.Website);\nloginpage.navigateLoginsection();\nloginpage.clickForgotpassword();\nloginpage.enterEmailtoResetpassword(this.data.ResetEmail);\nloginpage.clickSendEmaiil();\nloginpage.VerifyEmailsent();",
+              "err": {},
+              "uuid": "8aac03df-9626-4716-b7b9-fbd988a3aac9",
+              "parentUUID": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset password Email Expired",
+              "fullTitle": "Login functionality Reset password Email Expired",
+              "timedOut": null,
+              "duration": 12944,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.openURL(this.data.Website);\nloginpage.navigateLoginsection();\nloginpage.clickForgotpassword();\nloginpage.enterEmailtoResetpassword(this.data.ResetEmail);\nloginpage.clickSendEmaiil();\nloginpage.VerifyEmailsent();\nloginpage.openURL(this.data.resetpasswordURL);\nloginpage.enterNewpassword(this.data.ResetPassword);\nloginpage.clicReset();\nloginpage.verifyWarningmessage(this.data.Warningmeassage);",
+              "err": {},
+              "uuid": "4f6c3277-aad8-4cb9-9d3d-2cbdb8f326f5",
+              "parentUUID": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify useremail required field",
+              "fullTitle": "Login functionality Verify useremail required field",
+              "timedOut": null,
+              "duration": 4114,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.openURL(this.data.Website);\nloginpage.navigateLoginsection();\nloginpage.enterPassword(this.data.UserPassword);\nloginpage.clickLogin();\nloginpage.verifyWarningmessage(this.data.Checkdetails);\nloginpage.VerifyUsernameRequired();",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`\n    at ensureElement (https://www.douglas.de/__cypress/runner/cypress_runner.js:161879:76)\n    at validateType (https://www.douglas.de/__cypress/runner/cypress_runner.js:161702:16)\n    at $Cy.ensureSubjectByType (https://www.douglas.de/__cypress/runner/cypress_runner.js:161738:9)\n    at $Cy.pushSubjectAndValidate (https://www.douglas.de/__cypress/runner/cypress_runner.js:172191:12)\n    at Context.<anonymous> (https://www.douglas.de/__cypress/runner/cypress_runner.js:171677:19)\nFrom Your Spec Code:\n    at Loginpage.navigateLoginsection (https://www.douglas.de/__cypress/tests?p=cypress/e2e/LoginTest.cy.js:219:44)\n    at Context.eval (https://www.douglas.de/__cypress/tests?p=cypress/e2e/LoginTest.cy.js:344:15)",
+                "diff": null
+              },
+              "uuid": "b8e58fdc-86f9-4268-b24a-05f7eb32e75f",
+              "parentUUID": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify password required field",
+              "fullTitle": "Login functionality Verify password required field",
+              "timedOut": null,
+              "duration": 10322,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.openURL(this.data.Website);\nloginpage.navigateLoginsection();\nloginpage.enterUsername(this.data.UserEmail);\nloginpage.clickLogin();\nloginpage.verifyWarningmessage(this.data.Checkdetails);\nloginpage.VerifypasswordRequired();",
+              "err": {},
+              "uuid": "e1143cf0-fc5a-4294-9a07-9a8b4da728b7",
+              "parentUUID": "e56a1846-0ae4-457b-9e18-63ff996fd3b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "caa537cd-e725-4312-91d7-763bac5b6a34",
+            "43a7184a-b199-48a9-b177-a7c7d42b82d3",
+            "8aac03df-9626-4716-b7b9-fbd988a3aac9",
+            "4f6c3277-aad8-4cb9-9d3d-2cbdb8f326f5",
+            "e1143cf0-fc5a-4294-9a07-9a8b4da728b7"
+          ],
+          "failures": [
+            "b8e58fdc-86f9-4268-b24a-05f7eb32e75f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 64801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/Runreports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
